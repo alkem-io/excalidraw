@@ -5,6 +5,12 @@
 
 # Alkemio fork of Excalidraw v0.13.0
 
+### Modifications:
+
+- ZoomToFit feature exposed through the external API
+- Added ZoomToFit button to the zoom toolbar
+- Added ZoomToFit flag to initialData to fit items on load
+
 <hr />
 
 <div align="center" style="display:flex;flex-direction:column;">
