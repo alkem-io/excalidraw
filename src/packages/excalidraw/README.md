@@ -441,6 +441,7 @@ This helps to load Excalidraw with `initialData`. It must be an object or a [pro
 | `elements` | [ExcalidrawElement[]](https://github.com/excalidraw/excalidraw/blob/master/src/element/types.ts#L106) | The elements with which Excalidraw should be mounted. |
 | `appState` | [AppState](https://github.com/excalidraw/excalidraw/blob/master/src/types.ts#L79) | The App state with which Excalidraw should be mounted. |
 | `scrollToContent` | boolean | This attribute implies whether to scroll to the nearest element to center once Excalidraw is mounted. By default, it will not scroll the nearest element to the center. Make sure you pass `initialData.appState.scrollX` and `initialData.appState.scrollY` when `scrollToContent` is false so that scroll positions are retained |
+| `zoomToFit` | boolean | Apply automatic zoom on load to fit all the elements. |
 | `libraryItems` | [LibraryItems](https://github.com/excalidraw/excalidraw/blob/master/src/types.ts#L200) &#124; Promise<[LibraryItems](https://github.com/excalidraw/excalidraw/blob/master/src/types.ts#L200)> | This library items with which Excalidraw should be mounted. |
 | `files` | [BinaryFiles](https://github.com/excalidraw/excalidraw/blob/master/src/types.ts#L64) | The files added to the scene. |
 

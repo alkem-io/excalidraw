@@ -830,6 +830,13 @@ class App extends React.Component<AppProps, AppState> {
       ...scene,
       commitToHistory: true,
     });
+
+    if (initialData?.zoomToFit) {
+      // defer to after loading all elements
+      setTimeout(() => {
+        this.actionManager.executeAction(actionZoomToFit);
+      });
+    }
   };
 
   private refreshDeviceState = (container: HTMLDivElement) => {
