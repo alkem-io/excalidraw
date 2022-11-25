@@ -87,9 +87,10 @@
     ],
     "resetMocks": false
   },
-  "name": "excalidraw",
+  "name": "@alkemio/excalidraw",
+  "version": "13.0.0-alkemio",
   "prettier": "@excalidraw/prettier-config",
-  "private": true,
+  "private": false,
   "scripts": {
     "build-node": "node ./scripts/build-node.js",
     "build:app:docker": "REACT_APP_DISABLE_SENTRY=true react-scripts build",

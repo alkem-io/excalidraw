@@ -35,6 +35,7 @@ import {
   actionLink,
   actionToggleLock,
   actionToggleLinearEditor,
+  actionZoomToFit,
 } from "../actions";
 import { createRedoAction, createUndoAction } from "../actions/actionHistory";
 import { ActionManager } from "../actions/manager";
@@ -410,6 +411,7 @@ class App extends React.Component<AppProps, AppState> {
           clear: this.resetHistory,
         },
         scrollToContent: this.scrollToContent,
+        zoomToFit: this.zoomToFit,
         getSceneElements: this.getSceneElements,
         getAppState: () => this.state,
         getFiles: () => this.files,
@@ -1696,6 +1698,10 @@ class App extends React.Component<AppProps, AppState> {
         this.canvas,
       ),
     });
+  };
+
+  zoomToFit = () => {
+    this.actionManager.executeAction(actionZoomToFit);
   };
 
   setToast = (
