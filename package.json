@@ -88,7 +88,7 @@
     "resetMocks": false
   },
   "name": "@alkemio/excalidraw",
-  "version": "0.13.0-alkemio-4",
+  "version": "0.13.0-alkemio-5",
   "prettier": "@excalidraw/prettier-config",
   "private": false,
   "scripts": {
@@ -116,7 +116,6 @@
     "test:update": "yarn test:app --updateSnapshot --watchAll=false",
     "test": "yarn test:app",
     "autorelease": "node scripts/autorelease.js",
-    "prerelease": "node scripts/prerelease.js",
     "release": "node scripts/release.js"
   }
 }
