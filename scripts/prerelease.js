@@ -1,7 +1,7 @@
 const fs = require("fs");
 const util = require("util");
 const exec = util.promisify(require("child_process").exec);
-//const updateChangelog = require("./updateChangelog");
+const updateChangelog = require("./updateChangelog");
 
 const excalidrawDir = `${__dirname}/../src/packages/excalidraw`;
 const excalidrawPackage = `${excalidrawDir}/package.json`;
@@ -15,7 +15,7 @@ const updatePackageVersion = (nextVersion) => {
 
 const prerelease = async (nextVersion) => {
   try {
-    //await updateChangelog(nextVersion);
+    await updateChangelog(nextVersion);
     updatePackageVersion(nextVersion);
     await exec(`git add -u`);
     await exec(
