@@ -88,7 +88,7 @@
     "resetMocks": false
   },
   "name": "@alkemio/excalidraw",
-  "version": "0.13.0-alkemio-6",
+  "version": "0.13.0-alkemio-7",
   "prettier": "@excalidraw/prettier-config",
   "private": false,
   "scripts": {
