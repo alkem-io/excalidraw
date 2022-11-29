@@ -11,6 +11,22 @@
 - Added ZoomToFit button to the zoom toolbar
 - Added ZoomToFit flag to initialData to fit items on load
 
+### Build package:
+
+```
+VERSION=8
+git clone git@github.com:alkem-io/excalidraw.git
+git checkout develop
+yarn
+yarn build
+## Ensure that scripts/updateChangelog.js:39 is set to your current branch
+git commit --allow-empty -m "release @alkemio-excalidraw@0.13.0-alkemio-$VERSION"
+yarn prerelease 0.13.0-alkemio-$VERSION
+## Sometimes - not sure why - next step tries to run prerelease again, remove the script from package.json
+## Also prerelease deletes public/service-worker.js needs to be manually restored after releasing
+yarn release
+```
+
 <hr />
 
 <div align="center" style="display:flex;flex-direction:column;">
