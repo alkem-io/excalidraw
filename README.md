@@ -21,7 +21,7 @@
 - Once is merged to `develop`, checkout `develop` branch and see below how to build and publish the package to NPM repository.
 - Make sure you switch back the package in your client-web to use the published @alkemio/excalidraw package's new version instead of the old one or the linked one if you changed it.
 
-### Build package:
+### Build and publish a new npm package:
 ```
 ## Update this version with every published package
 VERSION=8
