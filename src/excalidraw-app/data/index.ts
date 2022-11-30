@@ -276,7 +276,6 @@ export const loadScene = async (
     // from a different database
     files: data.files,
     commitToHistory: false,
-    // zoomToFit: true, // Zoom to fit on load in demo app
   };
 };
 
