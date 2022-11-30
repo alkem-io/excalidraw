@@ -12,6 +12,7 @@
 - Added ZoomToFit flag to initialData to fit items on load
 
 ### Development guidelines
+- First of all, Excaldraw uses yarn as package manager, so first thing to do is make sure you have yarn installed in your system. `npm install --global yarn`.
 - Clone the repository to a local folder: `git clone git@github.com:alkem-io/excalidraw.git` and create a feature branch to store your work.
 - Follow the original Excalidraw instructions below to run and debug with the included test application - Just `yarn ; yarn start` should work.
 - To test/debug Excalidraw inside our client-web application:
