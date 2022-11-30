@@ -11,20 +11,30 @@
 - Added ZoomToFit button to the zoom toolbar
 - Added ZoomToFit flag to initialData to fit items on load
 
-### Build package:
+### Development guidelines
+- Clone the repository to a local folder: `git clone git@github.com:alkem-io/excalidraw.git` and create a feature branch to store your work.
+- Follow the original Excalidraw instructions below to run and debug with the included test application - Just `yarn ; yarn start` should work.
+- To test/debug Excalidraw inside our client-web application:
+   - Execute `npm link` in the root of your cloned repository.
+   - Go to your client-web folder and execute: `npm link @alkemio/excalidraw --save`
+- When you're done with the development commit and push everything, create a Pull Request in the alkem-io/excalidraw repository to merge your branch to develop.
+- Once is merged to `develop`, checkout `develop` branch and see below how to build and publish the package to NPM repository.
+- Make sure you switch back the package in your client-web to use the published @alkemio/excalidraw package's new version instead of the old one or the linked one if you changed it.
 
+### Build package:
 ```
+## Update this version with every published package
 VERSION=8
 git clone git@github.com:alkem-io/excalidraw.git
 git checkout develop
 yarn
 yarn build
-## Ensure that scripts/updateChangelog.js:39 is set to your current branch
+## Ensure that scripts/updateChangelog.js:39 is set to your current branch - you should be building from develop or from main
 git commit --allow-empty -m "release @alkemio-excalidraw@0.13.0-alkemio-$VERSION"
-yarn prerelease 0.13.0-alkemio-$VERSION
+yarn run prerelease 0.13.0-alkemio-$VERSION
 ## Sometimes - not sure why - next step tries to run prerelease again, remove the script from package.json
 ## Also prerelease deletes public/service-worker.js needs to be manually restored after releasing
-yarn release
+yarn run release
 ```
 
 <hr />
