@@ -268,6 +268,7 @@ export const ZoomActions = ({
       {renderAction("zoomOut")}
       {renderAction("zoomIn")}
       {renderAction("resetZoom")}
+      {renderAction("zoomToFit")}
     </Stack.Row>
   </Stack.Col>
 );

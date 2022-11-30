@@ -1,5 +1,5 @@
 import { ColorPicker } from "../components/ColorPicker";
-import { eraser, zoomIn, zoomOut } from "../components/icons";
+import { eraser, zoomIn, zoomOut, zoomToFit } from "../components/icons";
 import { ToolButton } from "../components/ToolButton";
 import { DarkModeToggle } from "../components/DarkModeToggle";
 import { THEME, ZOOM_STEP } from "../constants";
@@ -272,6 +272,19 @@ export const actionZoomToFit = register({
     event.shiftKey &&
     !event.altKey &&
     !event[KEYS.CTRL_OR_CMD],
+  PanelComponent: ({ elements, appState, updateData, data }) => (
+    <ToolButton
+      type="button"
+      icon={zoomToFit}
+      className={clsx("zoomToFit")}
+      title={`${t("toolBar.zoomToFit")} — ${getShortcutKey("Shift+1")}`}
+      aria-label={t("toolBar.zoomToFit")}
+      onClick={() => {
+        updateData(null);
+      }}
+      size={data?.size || "small"}
+    ></ToolButton>
+  ),
 });
 
 export const actionToggleTheme = register({

@@ -80,16 +80,17 @@
   "engines": {
     "node": ">=14.0.0"
   },
-  "homepage": ".",
+  "homepage": "https://github.com/alkem-io/excalidraw",
   "jest": {
     "transformIgnorePatterns": [
       "node_modules/(?!(roughjs|points-on-curve|path-data-parser|points-on-path|browser-fs-access)/)"
     ],
     "resetMocks": false
   },
-  "name": "excalidraw",
+  "name": "@alkemio/excalidraw",
+  "version": "0.13.0-alkemio-7",
   "prettier": "@excalidraw/prettier-config",
-  "private": true,
+  "private": false,
   "scripts": {
     "build-node": "node ./scripts/build-node.js",
     "build:app:docker": "REACT_APP_DISABLE_SENTRY=true react-scripts build",
